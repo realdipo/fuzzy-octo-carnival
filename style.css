@@ -239,17 +239,13 @@ body {
   background: transparent;
   border-radius: 0;
   padding: 0;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 500;
   color: var(--ink);
   letter-spacing: -0.5px;
   text-decoration: underline;
   text-decoration-skip-ink: none;
   white-space: nowrap;
-}
-
-.row-link--lg {
-  font-size: 16px;
 }
 
 .row-date {
