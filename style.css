@@ -52,13 +52,6 @@ body {
   padding: 100px 40px 120px;
 }
 
-.top-grid {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 40px;
-}
-
 .header {
   display: flex;
   flex-direction: column;
@@ -97,6 +90,18 @@ body {
   font-weight: 600;
 }
 
+.bio a {
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.bio a:hover {
+  color: #0a66c2;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
 .social-links {
   display: flex;
   gap: 12px;
@@ -105,6 +110,7 @@ body {
 
 .social-links a {
   font-size: 16px;
+  font-weight: 400;
   color: var(--muted);
   letter-spacing: -0.5px;
   text-decoration: none;
@@ -112,31 +118,47 @@ body {
   transition: color 0.15s ease;
 }
 
+.social-links a:hover,
+.social-links a:active {
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
 .social-links a:hover {
   color: var(--ink);
 }
 
 .social-links a[href*="linkedin.com"]:hover {
-  color: hsla(210, 90%, 40%, 1);
+  color: #0a66c2;
+}
+
+.social-links a[href*="linkedin.com"]:active {
+  color: #031a31;
 }
 
 .social-links a[href*="threads.com"]:hover {
-  color: #0C0C0C;
+  color: #0c0c0c;
 }
 
-.top-meta {
-  flex: 0 0 auto;
-  padding-top: 195px;
-  white-space: nowrap;
+.social-links a[href*="threads.com"]:active {
+  color: #404040;
 }
 
-.top-meta p {
-  margin: 0;
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--muted);
-  letter-spacing: -0.8px;
-  text-align: right;
+.social-links a[href*="instagram.com"]:hover {
+  color: #ff005f;
+}
+
+.social-links a[href*="instagram.com"]:active {
+  color: #660026;
+}
+
+.social-links a[href^="mailto:"]:hover {
+  color: #121212;
+}
+
+.social-links a[href^="mailto:"]:active {
+  color: #454545;
 }
 
 .content-stack {
@@ -181,13 +203,13 @@ body {
   display: flex;
   align-items: baseline;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 20px;
   min-width: 0;
 }
 
 .row-name {
   margin: 0;
-  width: 120px;
+  width: 121px;
   font-size: 24px;
   font-weight: 600;
   color: var(--ink);
@@ -251,23 +273,39 @@ body {
   font-weight: 500;
 }
 
+.footer-link {
+  color: var(--ink);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
+.footer-link[href*="threads.com"]:hover {
+  color: #0c0c0c;
+}
+
+.footer-link[href*="threads.com"]:active {
+  color: #404040;
+}
+
+.footer-link[href*="instagram.com"]:hover {
+  color: #ff005f;
+}
+
+.footer-link[href*="instagram.com"]:active {
+  color: #660026;
+}
+
 @media (max-width: 900px) {
   .name {
     font-size: clamp(40px, 10vw, 80px);
     line-height: 1;
-  }
-
-  .top-grid {
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .top-meta {
-    padding-top: 0;
-  }
-
-  .top-meta p {
-    text-align: left;
   }
 
   .content-stack {
